@@ -1,0 +1,7 @@
+name: yt-downloader
+dependencies:
+  - python=3.10
+  - pip
+  - ffmpeg
+  - pip:
+      - yt-dlp
