@@ -10,7 +10,7 @@ def get_and_clean_url(url_entry) :
         return -1
     return url[-11:]
 
-def run() :
+def run(splash) :
     def format_label(f):
         fmt_id = f.get('format_id', '???')
         ext = f.get('ext', '???')
@@ -125,6 +125,7 @@ def run() :
             root.destroy()  # or root.quit()
 
     # --- GUI Setup ---
+    splash.destroy()
     root = tk.Tk()
     root.title("YouTube Downloader")
     root.geometry("1000x1000")
