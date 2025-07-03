@@ -7,7 +7,9 @@ DOWNLOADS_FOLDER = str(Path.home() / 'Downloads')
 
 def get_ffmpeg_path():
     base = getattr(sys, '_MEIPASS', os.path.abspath("."))
-    return os.path.join(base, "ffmpeg")
+    filename = r'ffmpeg\ffmpeg.exe' if sys.platform.startswith("win") else "ffmpeg"
+    path = os.path.join(base, filename)
+    return(path)
 
 def get_all_formats(yt_url, neither=False) :
 
