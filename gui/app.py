@@ -14,8 +14,18 @@ def run(splash) :
     def format_label(f):
         fmt_id = f.get('format_id', '???')
         ext = f.get('ext', '???')
-        desc = f.get('resolution') or f.get('abr') or ''
-        return f"{fmt_id} - {ext} - {desc}"
+        vcodec = f.get('vcodec')
+        acodec = f.get('acodec')
+        resolution = f.get('resolution')
+        abr = f.get('abr')  # average bitrate in kbps
+        tbr = f.get('tbr')  # total bitrate
+
+        if vcodec and vcodec != 'none':
+            # Video format
+            return f"{resolution.split('x')[1]}p {ext} ({vcodec}) ({fmt_id})"
+        else:
+            # Audio format
+            return f"{abr} kb/s {ext} ({acodec}) ({fmt_id})"
 
     def click_load():
         url = get_and_clean_url(url_entry)
