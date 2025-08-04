@@ -1,4 +1,4 @@
-name: y-dui
+name: yd-ui
 dependencies:
   - python=3.10
   - pip

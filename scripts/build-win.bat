@@ -1,1 +1,1 @@
-pyinstaller --onefile --windowed --add-binary "ffmpeg/ffmpeg.exe;ffmpeg" main.py
+pyinstaller --onefile --windowed --add-binary "ffmpeg/ffmpeg.exe;ffmpeg" yd-ui.py
