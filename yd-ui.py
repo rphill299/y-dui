@@ -2,7 +2,6 @@ import sys
 
 def main():
     if len(sys.argv) > 1 :
-        splash.destroy()
         from cli import app
         app.run()
     else:
