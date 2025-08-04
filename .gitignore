@@ -1,0 +1,8 @@
+__pycache__
+*.DS_Store
+build/
+dist/
+*.pyc
+ffmpeg/
+*.spec
+releases/
