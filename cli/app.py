@@ -43,3 +43,6 @@ def run() :
     # download preferred formats
 
     util.download(yt_url, af, vf)
+
+if __name__ == '__main__' :
+    run()
